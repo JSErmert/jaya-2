@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --color-bone: #F8F6F1;
+  --color-charcoal: #1A1A1A;
+  --color-gold: #B8956C;
+  --color-terracotta: #9C6B4E;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bone);
+  color: var(--color-charcoal);
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-gold);
+  color: white;
+}
+
+/* Scrollbar (subtle, editorial) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bone);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+@keyframes jayaFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes jayaBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
