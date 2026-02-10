@@ -12,7 +12,7 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Pages with a dark hero image (white nav text when at top)
-  const hasDarkHero = pathname === "/" || pathname.startsWith("/story") || pathname.startsWith("/wholesale");
+  const hasDarkHero = pathname === "/" || pathname.startsWith("/wholesale");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -36,6 +36,7 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled ? "bg-[#F8F6F1]/90 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
+        suppressHydrationWarning
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
@@ -59,6 +60,7 @@ export default function Navigation() {
               onClick={() => setMobileOpen(true)}
               className={`md:hidden p-2 transition-colors ${textColor}`}
               aria-label="Open menu"
+              suppressHydrationWarning
             >
               <IconMenu size={24} />
             </button>

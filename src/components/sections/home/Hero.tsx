@@ -8,7 +8,6 @@ import { IconArrowRight } from "@/components/ui/icons";
 export default function Hero() {
   const { hero } = siteData;
   const [isMobile, setIsMobile] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -29,10 +28,7 @@ export default function Hero() {
         <img
           src={currentImage}
           alt="Sacred Valley of Peru"
-          className={`w-full h-full object-cover transition-opacity duration-1000 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          onLoad={() => setImageLoaded(true)}
+          className="w-full h-full object-cover object-center"
         />
         
         {/* Gradient Overlay */}

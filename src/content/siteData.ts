@@ -30,7 +30,7 @@ export const siteData = {
   },
 
   proofOfOrigin: {
-    headline: "Proof of Origin",
+    headline: "The Origin",
     items: [
       {
         metric: "3,380m",
@@ -186,12 +186,13 @@ export const siteData = {
     hero: {
       headline: "Our Story",
       subheadline: "Where the Andes meet ancient tradition.",
-      image: "https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1600&q=80",
+      image: "/images/Jaya_origin.JPEG",
     },
 
     // ✅ Update to match story/page.tsx expectation
     sections: [
       {
+        type: "text",
         title: "The Sacred Valley",
         paragraphs: [
           "High in the Peruvian Andes, nestled between Cusco and Machu Picchu, lies the Sacred Valley of the Incas.",
@@ -199,6 +200,12 @@ export const siteData = {
         ],
       },
       {
+        type: "image",
+        image: "/images/Jaya_origin.JPEG",
+        caption: "The ancient salt terraces of Maras, carved into the mountainside over 600 years ago.",
+      },
+      {
+        type: "text",
         title: "A Living Heritage",
         paragraphs: [
           "The Maras salt works predate the Incan empire.",
@@ -240,7 +247,7 @@ export const siteData = {
     hero: {
       headline: "Partner With Us",
       subheadline: "Bring the Sacred Valley to your customers.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80",
+      image: "/images/Jaya_origin.JPEG",
     },
 
     intro:

@@ -35,7 +35,7 @@ export default function Newsletter() {
                 <span className="text-sm tracking-wide">Thank you for subscribing.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4" suppressHydrationWarning>
                 <input
                   type="email"
                   value={email}
@@ -43,10 +43,12 @@ export default function Newsletter() {
                   placeholder={newsletter.placeholder}
                   required
                   className="flex-1 px-6 py-4 border border-[#1A1A1A]/10 bg-transparent text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 focus:outline-none focus:border-[#B8956C] transition-colors"
+                  suppressHydrationWarning
                 />
                 <button
                   type="submit"
                   className="group flex items-center justify-center gap-3 px-8 py-4 bg-[#1A1A1A] text-white text-sm tracking-widest uppercase hover:bg-[#B8956C] transition-colors"
+                  suppressHydrationWarning
                 >
                   {newsletter.buttonText}
                   <IconArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

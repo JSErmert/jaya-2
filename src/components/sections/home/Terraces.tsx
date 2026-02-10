@@ -17,7 +17,7 @@ export default function Terraces() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
-    <section ref={containerRef} className="relative bg-[#1A1A1A] overflow-hidden">
+    <section ref={containerRef} className="relative overflow-hidden">
       {/* Background Image with Parallax */}
       <motion.div className="absolute inset-0" style={{ y }}>
         <img

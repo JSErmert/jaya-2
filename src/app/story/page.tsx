@@ -33,13 +33,13 @@ export default function StoryPage() {
               return (
                 <ScrollReveal key={idx}>
                   <div className="max-w-3xl">
-                    {section.headline && (
-                      <h2 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-6">
-                        {section.headline}
-                      </h2>
-                    )}
+                    <h2 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-6">
+                      {section.title}
+                    </h2>
                     <div className="text-lg leading-relaxed text-[#1A1A1A]/70">
-                      <p>{section.content}</p>
+                      {section.paragraphs.map((para, pidx) => (
+                        <p key={pidx} className={pidx < section.paragraphs.length - 1 ? "mb-4" : ""}>{para}</p>
+                      ))}
                     </div>
                   </div>
                 </ScrollReveal>
